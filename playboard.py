@@ -10,9 +10,11 @@ class PlayBoard(Turtle):
         self.goto(position)
 
     def go_left(self):
-        new_x = self.xcor() - 20
-        self.goto(new_x,self.ycor())
+        if self.xcor() > -350:
+            new_x = self.xcor() - 25
+            self.goto(new_x,self.ycor())
 
     def go_right(self):
-        new_x = self.xcor() + 20
-        self.goto(new_x,self.ycor())
+        if self.xcor() < 350:
+            new_x = self.xcor() + 25
+            self.goto(new_x,self.ycor())
